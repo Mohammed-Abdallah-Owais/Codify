@@ -1,0 +1,27 @@
+<nav class="nav">
+  <a routerLink="/" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    Codify
+  </a>
+
+  <!-- Guest links -->
+  <div class="nav-links" *ngIf="!auth.isLoggedIn()">
+    <a routerLink="/" fragment="features" class="nav-link">Features</a>
+    <a routerLink="/" fragment="how"      class="nav-link">How it works</a>
+    <a routerLink="/" fragment="student"  class="nav-link">For students</a>
+    <a routerLink="/" fragment="instructor" class="nav-link">For instructors</a>
+    <button class="btn btn--ghost" routerLink="/auth/login">Log in</button>
+    <button class="btn btn--primary" routerLink="/auth/register">Get started</button>
+  </div>
+
+  <!-- Logged-in links -->
+  <div class="nav-links" *ngIf="auth.isLoggedIn()">
+    <a routerLink="/dashboard" class="nav-link">Dashboard</a>
+    <a routerLink="/problems"  class="nav-link">Problems</a>
+    <a routerLink="/progress"  class="nav-link">Progress</a>
+    <div class="nav-user">
+      <div class="nav-avatar">{{ auth.user()?.avatarInitials }}</div>
+      <span class="nav-username">{{ auth.user()?.name }}</span>
+    </div>
+  </div>
+</nav>
