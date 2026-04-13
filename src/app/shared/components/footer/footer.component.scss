@@ -1,0 +1,31 @@
+@use '../../../styles/variables' as *;
+
+.footer {
+  background: $navy;
+  color: rgba(255,255,255,0.5);
+  padding: 40px 2rem 32px;
+}
+
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 16px;
+}
+
+.footer-logo {
+  font-family: $ff-display;
+  font-size: 20px; color: $ivory;
+}
+
+.footer-links { display: flex; gap: 20px; }
+
+.footer-link {
+  font-size: 13px; color: rgba(255,255,255,0.4);
+  transition: color 0.15s;
+  &:hover { color: $ivory; }
+}
+
+.footer-copy {
+  font-size: 12px; font-family: $ff-mono;
+  color: rgba(255,255,255,0.25);
+}
