@@ -5,4 +5,5 @@ export interface User {
   role: 'student' | 'instructor';
   avatarInitials: string;
   streak?: number;
+  password?: string; // Optional, for mock data only
 }
