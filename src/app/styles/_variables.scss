@@ -27,6 +27,10 @@ $border:    rgba(26, 43, 74, 0.12);
 $shadow:    0 2px 24px rgba(26, 43, 74, 0.10);
 $shadow-lg: 0 8px 40px rgba(26, 43, 74, 0.18);
 
+// Breakpoints
+$mobile: 767px;
+$tablet: 1024px;
+
 // CSS custom properties (consumed by components)
 :root {
   --navy:    #{$navy};

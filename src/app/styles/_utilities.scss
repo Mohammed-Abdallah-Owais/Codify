@@ -1,6 +1,10 @@
 .section-inner  { max-width: 1200px; margin: 0 auto; }
 .section-pad    { padding: 80px 2rem; }
 
+@media (max-width: 767px) {
+  .section-pad { padding: 48px 1rem; }
+}
+
 // Section tags
 .section-tag {
   display: inline-flex; align-items: center; gap: 6px;

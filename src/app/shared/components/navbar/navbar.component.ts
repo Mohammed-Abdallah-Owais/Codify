@@ -15,28 +15,38 @@ export class NavbarComponent {
 
   isNotifOpen = false;
   isProfileOpen = false;
+  isMobileMenuOpen = false;
   streakDays = 1;
 
   logout(): void {
     this.auth.logout();
+    this.isMobileMenuOpen = false;
     this.router.navigate(['/']);
+  }
+
+  toggleMobileMenu(event: Event): void {
+    event.stopPropagation();
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    this.isNotifOpen = false;
+    this.isProfileOpen = false;
   }
 
   toggleNotifications(event: Event): void {
     event.stopPropagation();
     this.isNotifOpen = !this.isNotifOpen;
-    this.isProfileOpen = false; // Close profile if open
+    this.isProfileOpen = false;
   }
 
   toggleProfile(event: Event): void {
     event.stopPropagation();
     this.isProfileOpen = !this.isProfileOpen;
-    this.isNotifOpen = false; // Close notifications if open
+    this.isNotifOpen = false;
   }
 
   @HostListener('document:click')
   closeDropdowns(): void {
     this.isNotifOpen = false;
     this.isProfileOpen = false;
+    this.isMobileMenuOpen = false;
   }
 }

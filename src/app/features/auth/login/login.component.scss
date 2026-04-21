@@ -219,8 +219,14 @@ form {
 
 // Responsive design
 @media (max-width: 480px) {
+  .auth-container {
+    padding: 12px;
+    align-items: flex-start;
+    padding-top: 24px;
+  }
+
   .auth-card {
-    padding: 24px;
+    padding: 24px 20px;
 
     h1 {
       font-size: 24px;

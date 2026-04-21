@@ -5,8 +5,21 @@
 .section-sub  { font-size: 16px; color: $muted; max-width: 520px; }
 
 .steps-wrap {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 4rem; align-items: center; margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 48px;
+
+  @media (max-width: $tablet) {
+    gap: 2.5rem;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 32px;
+  }
 }
 
 .step {
@@ -16,6 +29,10 @@
   &:last-child { border-bottom: none; }
   &.active .step-num   { background: $navy; color: $gold; }
   &.active .step-title { color: $navy; }
+
+  @media (max-width: $mobile) {
+    padding: 16px 0;
+  }
 }
 
 .step-num {
@@ -33,6 +50,11 @@
   background: $navy; border-radius: $r-lg;
   padding: 28px; min-height: 320px;
   display: flex; flex-direction: column; justify-content: space-between;
+
+  @media (max-width: $mobile) {
+    min-height: 240px;
+    padding: 20px;
+  }
 }
 
 .preview-label  { font-family: $ff-mono; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; margin-bottom: 16px; }
