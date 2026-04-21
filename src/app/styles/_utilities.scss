@@ -35,7 +35,7 @@
   font-family: var(--ff-mono); padding: 3px 9px;
   border-radius: 20px; letter-spacing: 0.04em;
   &--easy  { background: var(--teal-lt);  color: var(--teal); }
-  &--med   { background: var(--gold-lt);  color: #8a6d00; }
+  &--med, &--medium { background: var(--gold-lt);  color: #8a6d00; }
   &--hard  { background: #FBEAF0;         color: #993556; }
   &--ai    { background: var(--teal-lt);  color: var(--teal); }
   &--clean { background: var(--teal-lt);  color: var(--teal); }
